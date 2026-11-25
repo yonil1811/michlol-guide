@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>מכלול | מדריך היכרות ותרגול — המרכז האקדמי לוינסקי־וינגייט</title>
+<meta name="description" content="מדריך היכרות נגיש עם תרגול אינטראקטיבי למעבר מאורביט למכלול, המרכז האקדמי לוינסקי־וינגייט">
+<style>
+:root{--purple:#2d008a;--purple2:#3e0fa5;--pink:#efadf0;--pinksoft:#f5e7f9;--ink:#241541;--muted:#5b506a;--line:#dfd8e9;--light:#f8f7fc;--white:#fff;--focus:#ffbe32;--green:#126a4a;--greens:#e8f5ef;--font-scale:100%}
+*{box-sizing:border-box}
+[hidden]{display:none !important}
+html{scroll-behavior:smooth;font-size:var(--font-scale)}
+body{margin:0;background:var(--light);color:var(--ink);font-family:'RAG Sans 1.4','Rag Sans',Arial,'Noto Sans Hebrew',sans-serif;line-height:1.67}
+body.high-contrast{--purple:#1c005c;--purple2:#29006c;--pink:#ffc9ff;--pinksoft:#f2def4;--ink:#090015;--muted:#201832;--line:#54456e;--light:#fff;--focus:#eeb100}
+button,input,select{font:inherit}
+a{color:var(--purple);text-decoration-thickness:2px;text-underline-offset:4px}
+a:hover{text-decoration:underline}
+button{cursor:pointer}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.skip{position:absolute;top:-100px;right:12px;background:#fff;color:var(--purple);padding:12px 18px;border:2px solid var(--purple);z-index:1000;border-radius:8px}
+.skip:focus{top:10px}
+.wrap{width:min(1180px,calc(100% - 40px));margin-inline:auto}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;box-shadow:0 2px 14px #16073e08}
+.head{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:90px}
+.brand{display:flex;align-items:center;gap:15px;min-width:0}
+.brand img{height:66px;width:auto;max-width:190px;object-fit:contain}
+.brandtxt{border-right:2px solid var(--line);padding-right:15px}
+.brandtxt strong{display:block;font-size:.93rem;color:var(--purple)}
+.brandtxt span{display:block;color:var(--muted);font-size:.82rem}
+.headtools{display:flex;align-items:center;flex-wrap:wrap;gap:7px}
+.toolbtn{background:#fff;border:1.5px solid #c9b8de;color:var(--purple);border-radius:11px;min-width:44px;min-height:44px;padding:8px 11px;font-size:.84rem;font-weight:700}
+.toolbtn:hover{background:var(--pinksoft)}
+nav.nav{background:#fff;border-top:1px solid #eee9f3}
+.navinner{display:flex;align-items:center;gap:20px;min-height:46px;overflow-x:auto;scrollbar-width:thin}
+nav.nav a{font-size:.86rem;font-weight:700;color:var(--purple);white-space:nowrap;text-decoration:none;padding:10px 0}
+nav.nav a:hover{text-decoration:underline}
+main{padding-bottom:52px}
+section{scroll-margin-top:160px}
+.hero{background:var(--purple);color:#fff;margin-top:24px;border-radius:22px;min-height:340px;display:grid;grid-template-columns:minmax(0,1.45fr) minmax(270px,.75fr);overflow:hidden;position:relative}
+.hero:before{content:"";position:absolute;left:-110px;top:-100px;width:370px;height:370px;border:55px solid #6834b1;border-radius:34%;opacity:.56;transform:rotate(-24deg);pointer-events:none}
+.herocontent{position:relative;padding:39px 45px 42px;z-index:1}
+.eyebrow{font-size:.86rem;font-weight:800;letter-spacing:.1px;color:#f5d0ff}
+h1{font-size:clamp(2.6rem,4.9vw,4.25rem);line-height:1.09;margin:13px 0 18px;letter-spacing:-1.1px}
+.hero p{font-size:1.23rem;max-width:670px;line-height:1.65;margin:0;color:#fff}
+.herobuttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}
+.btn{border:0;background:var(--purple);color:white;font-weight:800;min-height:50px;display:inline-flex;align-items:center;justify-content:center;border-radius:12px;padding:12px 20px;text-decoration:none;font-size:1rem;line-height:1.3}
+.btn:hover{filter:brightness(1.08);text-decoration:none}
+.btn-primary{background:var(--pink);color:var(--purple)}
+.btn-white{background:#fff;color:var(--purple)}
+.btn-secondary{background:#f0eaf8;color:var(--purple);border:1px solid #d7c9e8}
+.btn-ghost{background:#fff;color:var(--purple);border:1.5px solid var(--purple)}
+.heroaside{position:relative;z-index:1;border-right:1px solid #ffffff33;padding:28px;display:flex;flex-direction:column;justify-content:center;gap:15px;background:#ffffff0d}
+.heroaside .metric{padding:15px 0;border-bottom:1px solid #ffffff38}
+.heroaside .metric:last-child{border-bottom:0}
+.heroaside .metric b{display:block;color:var(--pink);font-size:1.42rem;line-height:1.2}
+.heroaside .metric span{color:#fff;font-size:.9rem}
+.sectionblock{margin-top:38px}
+.sectop{display:flex;align-items:end;justify-content:space-between;gap:22px;margin-bottom:18px}
+.kicker{color:var(--purple);font-weight:800;font-size:.84rem;margin:0 0 5px}
+h2{color:var(--purple);font-size:clamp(1.72rem,2.3vw,2.15rem);line-height:1.22;margin:0 0 8px;letter-spacing:-.3px}
+.sectop p{margin:4px 0;color:var(--muted);font-size:.99rem;max-width:720px}
+.grid{display:grid;gap:15px}
+.grid3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.grid2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.box{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 3px 18px #20104c04}
+.box h3{font-size:1.14rem;color:var(--purple);margin:4px 0 6px}
+.box p{margin:0;color:var(--muted);font-size:.97rem}
+.num{display:inline-flex;align-items:center;justify-content:center;background:var(--pinksoft);border:1px solid #e7d0f4;color:var(--purple);width:42px;height:42px;border-radius:13px;font-weight:900;font-size:1.05rem}
+.ribbon{margin-top:18px;border-right:5px solid var(--purple);padding:16px 20px;background:var(--pinksoft);border-radius:12px;color:var(--ink);font-weight:700;font-size:1.04rem}
+.mapgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.mapitem{display:flex;align-items:flex-start;gap:13px;background:white;padding:18px;border:1px solid var(--line);border-radius:16px}
+.ico{flex:0 0 46px;width:46px;height:46px;border-radius:13px;background:var(--pinksoft);display:flex;align-items:center;justify-content:center;color:var(--purple)}
+.ico svg{width:24px;height:24px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.mapitem h3{font-size:1.01rem;color:var(--purple);margin:0 0 5px}
+.mapitem p{font-size:.88rem;color:var(--muted);margin:0;line-height:1.5}
+.stepflow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.flowitem{background:#fff;border:1px solid var(--line);border-radius:17px;padding:20px;position:relative}
+.flowitem::before{content:attr(data-n);font-size:1.7rem;line-height:1;font-weight:900;color:var(--purple)}
+.flowitem h3{margin:13px 0 6px;color:var(--purple);font-size:1.06rem}
+.flowitem p{font-size:.89rem;color:var(--muted);margin:0}
+.practice{margin-top:45px;background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 12px 36px #2106500d}
+.practicehead{background:var(--purple);color:#fff;padding:24px 30px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.practicehead .kicker{color:var(--pink)}
+.practicehead h2{color:#fff;margin:0;font-size:1.9rem}
+.practicehead p{margin:6px 0 0;color:#fff;font-size:.96rem}
+.safebadge{border:1px solid #ffffff66;border-radius:99px;padding:8px 13px;font-weight:700;font-size:.83rem;white-space:nowrap}
+.practicebody{padding:26px}
+.practiceintro{margin:0 0 18px;color:var(--muted);font-size:.99rem}
+.gameprogress{display:flex;align-items:center;gap:16px;margin-bottom:17px}
+.gameprogress .bar{flex:1;height:12px;border-radius:50px;background:#eee9f6;overflow:hidden}
+.gameprogress .bar span{display:block;height:100%;width:0%;background:var(--purple);transition:width .2s}
+.gameprogress .steptext{color:var(--purple);font-weight:800;min-width:95px;white-space:nowrap}
+.mock{border:1px solid #d6cce4;border-radius:17px;overflow:hidden;background:#fff;display:grid;grid-template-columns:190px 1fr;min-height:440px}
+.mocknav{background:#f5f2fa;border-left:1px solid var(--line);padding:20px 13px}
+.mockbrand{font-weight:900;color:var(--purple);border-bottom:1px solid var(--line);padding:0 6px 14px;margin-bottom:14px;font-size:1.16rem}
+.mockbrand span{display:block;color:var(--muted);font-size:.72rem;font-weight:500}
+.mocknavlist{display:grid;gap:7px}
+.mocknavitem{font-size:.84rem;padding:10px 12px;border-radius:10px;color:#534768}
+.mocknavitem.active{background:#e6dcef;color:var(--purple);font-weight:800}
+.mockwork{padding:24px 26px}
+.mocktop{display:flex;justify-content:space-between;align-items:start;gap:15px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:13px;margin-bottom:16px}
+.mocktop h3{font-size:1.48rem;line-height:1.3;color:var(--purple);margin:0}
+.mocktop p{font-size:.91rem;color:var(--muted);margin:4px 0 0}
+.mockstatus{background:#f5edf9;color:var(--purple);padding:5px 10px;border-radius:99px;font-size:.73rem;font-weight:700;white-space:nowrap}
+.instruction{padding:14px 16px;background:#f7f1fa;border-right:4px solid var(--purple);border-radius:10px;margin:0 0 18px;font-size:1rem}
+.formrow{display:flex;align-items:end;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.field{display:grid;gap:6px}
+.field label{font-weight:700;font-size:.88rem}
+.field input,.field select{background:white;color:var(--ink);border:1.5px solid #aa9abd;border-radius:10px;min-height:48px;padding:10px 13px;min-width:225px;max-width:100%}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px}
+table{width:100%;border-collapse:collapse;text-align:right;font-size:.88rem;min-width:410px}
+th,td{padding:12px 13px;border-bottom:1px solid var(--line)}
+th{background:#f2edf8;color:var(--purple)}
+tr:last-child td{border-bottom:0}
+.status{background:#e8f4ed;color:#0c593a;font-size:.8rem;font-weight:700;padding:5px 10px;border-radius:99px;white-space:nowrap}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.tabbtn{border:1px solid #d5c8e6;background:#f7f4fb;color:var(--purple);border-radius:10px;min-height:45px;padding:9px 14px;font-weight:700}
+.tabbtn.active{background:var(--purple);color:#fff}
+.record{padding:15px;border:1px solid var(--line);border-radius:12px;margin-bottom:15px}
+.record strong{display:block;color:var(--purple);font-size:1.16rem}
+.record small{color:var(--muted)}
+.options{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.options .btn{min-height:55px;font-size:.9rem}
+.feedback{margin-top:15px;min-height:1px}
+.success{background:var(--greens);border:1px solid #9fcbb9;color:#0d583f;padding:13px 16px;border-radius:11px;font-weight:700}
+.tip{background:#fff8e3;color:#644b05;border:1px solid #ebd38d;padding:13px 16px;border-radius:11px;margin-top:12px}
+.bottomactions{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin-top:16px}
+.bottomactions .left{display:flex;gap:10px;flex-wrap:wrap}
+.smallnote{color:var(--muted);font-size:.83rem;margin-top:14px}
+.faqgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+details{background:#fff;border:1px solid var(--line);border-radius:13px;padding:16px 18px}
+summary{cursor:pointer;color:var(--purple);font-weight:800;font-size:1rem;list-style-position:inside}
+details p{font-size:.92rem;color:var(--muted);margin:10px 0 0}
+.footerbox{margin-top:40px;background:#fff;border-top:4px solid var(--purple);border-radius:18px;padding:24px;border-right:1px solid var(--line);border-left:1px solid var(--line);border-bottom:1px solid var(--line)}
+.footerbox h2{font-size:1.5rem}
+.footerbox p{margin:4px 0;color:var(--muted)}
+footer{padding:22px 0 28px;color:var(--muted);font-size:.8rem}
+footer .footline{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:980px){.hero{grid-template-columns:1fr}.heroaside{border-right:0;border-top:1px solid #ffffff38;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:15px 22px}.heroaside .metric{border:0;padding:4px 6px}.mapgrid{grid-template-columns:repeat(2,1fr)}.stepflow{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.head{min-height:76px}.brand img{height:49px;max-width:125px}.brandtxt{display:none}.headtools{gap:4px}.toolbtn{font-size:.8rem;min-width:38px;min-height:42px;padding:7px}.navinner{gap:18px}.wrap{width:min(100% - 24px,1180px)}.hero{margin-top:12px;min-height:0;border-radius:16px}.herocontent{padding:28px 23px}.hero p{font-size:1.05rem}.heroaside{grid-template-columns:1fr}.heroaside .metric{display:flex;gap:14px;align-items:center}.heroaside .metric b{min-width:110px;font-size:1rem}.grid3,.grid2,.mapgrid,.faqgrid,.stepflow{grid-template-columns:1fr}.box{padding:20px}.sectionblock{margin-top:31px}.mock{grid-template-columns:1fr}.mocknav{display:none}.mockwork{padding:20px 15px}.practicehead{padding:22px 19px}.practicebody{padding:17px 13px}.options{grid-template-columns:1fr}.field input,.field select{width:100%;min-width:0}.field{width:100%}.formrow .btn{width:100%}.bottomactions .left{width:100%}.bottomactions .left .btn{flex:1}h1{letter-spacing:-.5px}.gameprogress{gap:7px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.gameprogress .bar span{transition:none}}
+@media print{header,.nav,.herobuttons,.headtools,.bottomactions,.mocknav,#game-controls{display:none!important}.hero{display:block;min-height:0;border-radius:12px}.heroaside{display:none}.practice{break-before:page}.sectionblock{break-inside:avoid}.mock{grid-template-columns:1fr;min-height:0}body{background:white}.wrap{width:100%}a{text-decoration:none}footer{font-size:9pt}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">דלג לתוכן</a>
+<header>
+  <div class="head wrap">
+    <div class="brand">
+      <img src="data:image/png;base64,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" alt="המרכז האקדמי לוינסקי־וינגייט">
+      <div class="brandtxt"><strong>ערכת היכרות למערכת מכלול</strong><span>המרכז האקדמי לוינסקי־וינגייט</span></div>
+    </div>
+    <div class="headtools" aria-label="כלי תצוגה">
+      <button type="button" class="toolbtn" id="fontDown" aria-label="הקטנת גודל הטקסט">א−</button>
+      <button type="button" class="toolbtn" id="fontUp" aria-label="הגדלת גודל הטקסט">א+</button>
+      <button type="button" class="toolbtn" id="contrast" aria-pressed="false">ניגודיות</button>
+      <button type="button" class="toolbtn" id="printPage">הדפסה</button>
+    </div>
+  </div>
+  <nav class="nav" aria-label="ניווט במדריך"><div class="navinner wrap">
+    <a href="#overview">מה חשוב לדעת?</a><a href="#areas">מה יש במכלול?</a><a href="#safe">איך מתחילים?</a><a href="#practice">התנסות מודרכת</a><a href="#faq">שאלות ותשובות</a>
+  </div></nav>
+</header>
+<main id="main" class="wrap">
+  <section class="hero" aria-labelledby="title">
+    <div class="herocontent">
+      <div class="eyebrow">מדריך דיגיטלי + התנסות מעשית</div>
+      <h1 id="title">מכלול.<br>מתחילים להכיר.</h1>
+      <p>המערכת מתחלפת. הניסיון שלכם נשאר. כאן אפשר להבין מה חשוב, להכיר פעולות יומיומיות ולתרגל בקצב אישי.</p>
+      <div class="herobuttons"><a class="btn btn-primary" href="#practice">מתחילים תרגול</a><a class="btn btn-white" href="#overview">קודם מכירים את המערכת</a></div>
+    </div>
+    <div class="heroaside" aria-label="שלושה עקרונות מרכזיים">
+      <div class="metric"><b>רק מה שצריך</b><span>מתמקדים בפעולות של התפקיד</span></div>
+      <div class="metric"><b>בקצב אישי</b><span>אפשר לחזור על כל שלב</span></div>
+      <div class="metric"><b>בלי נתוני אמת</b><span>כל התרגול נעשה בדוגמה בטוחה</span></div>
+    </div>
+  </section>
+  <section id="overview" class="sectionblock" aria-labelledby="overview-title">
+    <div class="sectop"><div><p class="kicker">01 / מתחילים מהעיקר</p><h2 id="overview-title">שלושה דברים שכדאי לדעת כבר עכשיו</h2></div></div>
+    <div class="grid grid3">
+      <article class="box"><span class="num" aria-hidden="true">1</span><h3>לא צריך ללמוד הכול</h3><p>מכלול כוללת תחומים רבים. בשלב הראשון מתמקדים במשימות הנפוצות בעבודה שלכם.</p></article>
+      <article class="box"><span class="num" aria-hidden="true">2</span><h3>הידע המקצועי נשאר</h3><p>העבודה עם סטודנטים, מועמדים, קורסים ונתונים מוכרת לכם. כעת מכירים דרך חדשה לבצע אותה.</p></article>
+      <article class="box"><span class="num" aria-hidden="true">3</span><h3>מותר להתנסות</h3><p>בתרגול שבהמשך כל הנתונים מדומים. אפשר לנסות שוב, לבקש רמז ולהתקדם רק כשמוכנים.</p></article>
+    </div>
+    <div class="ribbon">הכלל החשוב ביותר: פעולה אחת בכל פעם. מתקדמים לפי סדר, ובודקים לפני שינוי מידע אמיתי.</div>
+  </section>
+  <section id="areas" class="sectionblock" aria-labelledby="areas-title">
+    <div class="sectop"><div><p class="kicker">02 / מפת המערכת</p><h2 id="areas-title">מהי מכלול, ומה אפשר למצוא בה?</h2><p>מכלול, מבית חברת ראשים, נועדה לנהל תהליכים אקדמיים ומינהליים. אלה תחומי הפעילות העיקריים לפי אתר הספק.</p></div></div>
+    <div class="mapgrid">
+      <article class="mapitem"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="3"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg></div><div><h3>לומדים ונתונים אקדמיים</h3><p>תיק אישי, פרטי לימודים, ציונים ונוכחות.</p></div></article>
+      <article class="mapitem"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 3h16v18H4zM8 8h8M8 12h8M8 16h4"/></svg></div><div><h3>רישום וקבלה</h3><p>מועמדים, תהליכי קבלה ומעקב אחר הרשמה.</p></div></article>
+      <article class="mapitem"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 5h8l2 2h8v13H3zM7 11h10M7 15h7"/></svg></div><div><h3>קורסים ותוכניות לימוד</h3><p>חוגים, מסלולים, קורסים וסילבוסים.</p></div></article>
+      <article class="mapitem"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18"/></svg></div><div><h3>מערכות שעות ובחינות</h3><p>תכנון מועדים, שיבוצים, חדרים ומשאבים.</p></div></article>
+      <article class="mapitem"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h5"/></svg></div><div><h3>שכר לימוד ותשלומים</h3><p>מידע על חיובים, תשלומים וגבייה.</p></div></article>
+      <article class="mapitem"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V10M9 20V5M14 20v-8M19 20V3M2 21h20"/></svg></div><div><h3>סגל, דוחות ונתונים</h3><p>מידע על סגל, דוחות, כלי בקרה ו־BI.</p></div></article>
+    </div>
+    <p class="smallnote">האפשרויות הזמינות בפועל תלויות בתפקיד, בהרשאות ובתהליכים שהמרכז האקדמי יטמיע. אין צורך לזכור את כל התחומים.</p>
+  </section>
+  <section id="safe" class="sectionblock" aria-labelledby="safe-title">
+    <div class="sectop"><div><p class="kicker">03 / שיטת עבודה</p><h2 id="safe-title">נתקלים במסך לא מוכר? כך מתקדמים.</h2><p>ארבע פעולות פשוטות עוזרות להתחיל בביטחון ולצמצם טעויות מיותרות.</p></div></div>
+    <div class="stepflow">
+      <article class="flowitem" data-n="01"><h3>מגדירים מטרה</h3><p>מה רוצים לעשות? למצוא סטודנט, לבדוק סטטוס או להפיק דוח?</p></article>
+      <article class="flowitem" data-n="02"><h3>מזהים מידע מוכר</h3><p>מתחילים בשם, במסלול או בסוג המידע הנדרש.</p></article>
+      <article class="flowitem" data-n="03"><h3>מתקדמים שלב אחד</h3><p>בודקים את הנתונים המוצגים לפני שלוחצים או שומרים.</p></article>
+      <article class="flowitem" data-n="04"><h3>מבקשים הכוונה</h3><p>אם לא בטוחים, נעזרים במדריך או בגורם ההדרכה שהמוסד יגדיר.</p></article>
+    </div>
+  </section>
+  <section id="practice" class="practice" aria-labelledby="practice-title">
+    <div class="practicehead"><div><p class="kicker">04 / מתנסים כאן ועכשיו</p><h2 id="practice-title">התנסות מודרכת במכלול</h2><p>חמש משימות קצרות. ללא שעון, ללא ציון וללא שינוי נתונים אמיתיים.</p></div><span class="safebadge">סביבת הדגמה עצמאית</span></div>
+    <div class="practicebody">
+      <p class="practiceintro">זהו תרגול המדמה תהליכים אפשריים במערכת אקדמית. המסכים אינם העתק של מכלול במרכז האקדמי, והנתונים פיקטיביים.</p>
+      <div class="gameprogress"><div class="steptext" id="stepIndicator">לפני התחלה</div><div class="bar" role="progressbar" aria-label="התקדמות בתרגול" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0" id="progressBar"><span id="progressFill"></span></div></div>
+      <div class="mock" id="exercise">
+        <aside class="mocknav" aria-label="אזורי מערכת להמחשה"><div class="mockbrand">מכלול <span>סביבת תרגול להמחשה</span></div><div class="mocknavlist" id="mockMenu"><div class="mocknavitem active">מסך פתיחה</div><div class="mocknavitem">לומדים</div><div class="mocknavitem">הרשמה וקבלה</div><div class="mocknavitem">דוחות</div></div></aside>
+        <div class="mockwork" id="gameStage" aria-live="off"></div>
+      </div>
+      <div class="feedback" id="liveStatus" role="status" aria-live="polite" aria-atomic="true"></div>
+      <div class="bottomactions" id="game-controls"><div class="left"><button type="button" class="btn btn-secondary" id="hintButton">אפשר רמז?</button><button type="button" class="btn btn-ghost" id="backButton">חזרה</button></div><button type="button" class="btn" id="nextButton">מתחילים</button></div>
+      <p class="smallnote">התרגול פועל בתוך המסמך, גם ללא חיבור לאינטרנט. לא מוזנים בו פרטים אמיתיים, ואין שליחת מידע לשרת.</p>
+    </div>
+  </section>
+  <section id="faq" class="sectionblock" aria-labelledby="faq-title">
+    <div class="sectop"><div><p class="kicker">05 / תשובות קצרות</p><h2 id="faq-title">שאלות שכדאי לקבל עליהן תשובה</h2><p>לוחצים על השאלה כדי לקרוא את התשובה.</p></div></div>
+    <div class="faqgrid">
+      <details><summary>האם צריך להכיר את כל מכלול?</summary><p>לא. מתחילים מהתחומים ומהפעולות הרלוונטיים לתפקיד שלכם. חלקים אחרים במערכת עשויים כלל לא להיות זמינים בהרשאות שלכם.</p></details>
+      <details><summary>האם הפעולות ייראו כמו באורביט?</summary><p>לא בהכרח. חלק מהמסכים ואופן ביצוע הפעולות עשויים להשתנות. לכן נלמד לבצע את המשימות המוכרות בסביבה החדשה.</p></details>
+      <details><summary>מה עושים אם לא מוצאים משהו?</summary><p>מגדירים מה ניסיתם לבצע, רושמים את שם המסך או את הודעת המערכת ופונים למדריך או לאיש התמיכה שיוגדר מטעם המוסד. לא מבצעים שינויים לא מוכרים על נתוני אמת.</p></details>
+      <details><summary>מה לגבי הדרכות, גישה והעברת נתונים?</summary><p>פרטי ההטמעה, מועדי הדרכה, הרשאות, תמיכה והעברת מידע יימסרו על ידי צוות הפרויקט של המרכז. פרטים אלה אינם נלמדים מאתר הספק.</p></details>
+    </div>
+  </section>
+  <section class="footerbox" aria-label="המשך היכרות">
+    <h2>השלב הבא: להכיר פעולה אחת אמיתית מהתפקיד שלכם</h2>
+    <p>אחרי ההתנסות, בחרו פעולה אחת שאתם מבצעים בדרך כלל באורביט. בהדרכה המוסדית כדאי לבקש לראות כיצד מבצעים אותה במכלול.</p>
+    <a href="#practice" class="btn btn-secondary" style="margin-top:13px">בחזרה להתנסות</a>
+  </section>
+</main>
+<footer><div class="wrap footline"><span>המרכז האקדמי לוינסקי־וינגייט · ערכת היכרות למערכת מכלול</span><span>מקור: <a href="https://rashim.co.il/%D7%9E%D7%99%D7%A0%D7%94%D7%9C-%D7%90%D7%A7%D7%93%D7%9E%D7%99/" target="_blank" rel="noopener">אתר חברת ראשים – מינהל אקדמי</a></span></div></footer>
+<script>
+'use strict';
+const S={step:0,done:false,hint:false,notice:'',search:'',tab:'',status:'',report:''};
+const taskNames=['','איתור סטודנט','כרטיס סטודנט','בדיקת מצב הרשמה','הפקת דוח לדוגמה','בחירה בדרך בטוחה'];
+const titles=['התרגול מתחיל כאן','מאתרים סטודנט/ית','מכירים כרטיס סטודנט','בודקים מצב הרשמה','מפיקים דוח לדוגמה','יודעים מה לעשות כשנתקעים','השלמתם את המסלול'];
+const labels=['מסך פתיחה','לומדים','לומדים','הרשמה וקבלה','דוחות','עזרה','סיום'];
+const hints=['','כתבו בשדה החיפוש „נועה ישראלי” ולחצו על „חיפוש”.','בכרטיס של נועה יש לשונית בשם „קורסים”. בחרו בה.','קראו את התג שמוצג ליד שם המועמדת.','בחרו „הרשמות” בשדה סוג הדוח, ואז „הפקת דוח”.','כדאי לבחור בפתיחת מדריך או בפנייה לתמיכה מוסמכת.'];
+function htmlEscape(text){return String(text).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function instruction(str){return `<div class="instruction"><strong>המשימה:</strong> ${str}</div>`}
+function stageTemplate(){
+  const head=(subtitle='')=>`<div class="mocktop"><div><h3 tabindex="-1" id="stageTitle">${titles[S.step]}</h3><p>${subtitle}</p></div><span class="mockstatus">הדגמה בלבד</span></div>`;
+  if(S.step===0)return head('5 פעולות קצרות, אחת בכל פעם.')+`<p>אפשר לנסות, לקבל רמז ולחזור לשלב קודם. כל הנתונים המופיעים כאן הם דוגמאות בלבד.</p><div class="grid grid3" style="margin-top:17px"><div class="box" style="padding:17px"><strong>1. מנסים</strong><p>מבצעים פעולה מוכרת.</p></div><div class="box" style="padding:17px"><strong>2. נעזרים</strong><p>מקבלים רמז בכל שלב.</p></div><div class="box" style="padding:17px"><strong>3. ממשיכים</strong><p>מתקדמים לאחר הצלחה.</p></div></div>`;
+  if(S.step===1)return head('חיפוש לפי מידע מוכר')+instruction('הקלידו „נועה ישראלי” בשדה ולחצו על חיפוש.')+`<form id="searchForm" class="formrow"><div class="field"><label for="studentName">שם הסטודנט/ית</label><input id="studentName" name="studentName" value="${htmlEscape(S.search)}" placeholder="לדוגמה: נועה ישראלי" autocomplete="off"></div><button class="btn" type="submit">חיפוש</button></form><div class="tablewrap"><table><thead><tr><th>שם</th><th>מסלול</th><th>מצב</th></tr></thead><tbody>${S.done?`<tr><td>נועה ישראלי</td><td>חינוך</td><td><span class="status">נמצאה רשומה</span></td></tr>`:`<tr><td colspan="3">כאן יוצגו תוצאות החיפוש.</td></tr>`}</tbody></table></div>`;
+  if(S.step===2)return head('כרטיס סטודנט לדוגמה')+instruction('בחרו בלשונית „קורסים” בכרטיס של נועה.')+`<div class="record"><strong>נועה ישראלי</strong><small>מספר רשומה: 10024 · מסלול חינוך · נתוני הדגמה</small></div><div class="tabs" role="group" aria-label="אזורי כרטיס הסטודנט"><button type="button" class="tabbtn ${S.tab==='details'?'active':''}" data-tab="details">פרטים כלליים</button><button type="button" class="tabbtn ${S.tab==='courses'?'active':''}" data-tab="courses">קורסים</button><button type="button" class="tabbtn ${S.tab==='payments'?'active':''}" data-tab="payments">תשלומים</button></div><div class="record" aria-live="polite">${S.tab==='courses'?'<strong>קורסים</strong><p>מבוא לחינוך · סמסטר א׳</p>':S.tab==='payments'?'<strong>תשלומים</strong><p>תצוגת מידע לדוגמה</p>':'בחרו לשונית כדי להציג מידע.'}</div>`;
+  if(S.step===3)return head('כרטיס מועמדת לדוגמה')+instruction('מהו מצב ההרשמה שמופיע בכרטיס של מיכל?')+`<div class="record"><strong>מיכל כהן</strong><small>מועמדת למסלול חינוך · נתוני הדגמה</small><p style="margin:10px 0 0"><span class="status">מצב הרשמה: ממתינה למסמכים</span></p></div><div class="options" role="group" aria-label="בחירת מצב הרשמה"><button class="btn btn-secondary" data-status="accepted">התקבלה</button><button class="btn btn-secondary" data-status="waiting">ממתינה למסמכים</button><button class="btn btn-secondary" data-status="closed">נסגרה</button></div>`;
+  if(S.step===4)return head('אזור דוחות לדוגמה')+instruction('בחרו „הרשמות” בסוג הדוח ולחצו על הפקה.')+`<div class="formrow"><div class="field"><label for="reportSelect">סוג הדוח</label><select id="reportSelect"><option value="">בחרו סוג דוח</option><option value="attendance" ${S.report==='attendance'?'selected':''}>נוכחות</option><option value="registrations" ${S.report==='registrations'?'selected':''}>הרשמות</option><option value="payments" ${S.report==='payments'?'selected':''}>תשלומים</option></select></div><button class="btn" type="button" data-act="report">הפקת דוח</button></div>${S.done?`<div class="tablewrap"><table><thead><tr><th>מסלול</th><th>מספר מועמדים</th><th>תקופה</th></tr></thead><tbody><tr><td>חינוך</td><td>18</td><td>דוגמה בלבד</td></tr><tr><td>חינוך גופני</td><td>12</td><td>דוגמה בלבד</td></tr></tbody></table></div>`:''}`;
+  if(S.step===5)return head('כך פועלים כשהשלב הבא לא ברור')+instruction('בחרו את הפעולה הבטוחה ביותר במערכת עבודה אמיתית.')+`<div class="options" role="group" aria-label="בחירת דרך פעולה"><button class="btn btn-secondary" data-help="guess">לנסות כפתורים אקראיים</button><button class="btn btn-secondary" data-help="ask">להיעזר במדריך או בתמיכה</button><button class="btn btn-secondary" data-help="quit">לוותר על הפעולה</button></div>`;
+  return head('כבר תרגלתם חמש פעולות שונות.')+`<div class="success"><strong style="font-size:1.2rem">כל הכבוד, סיימתם!</strong><br>איתרתם מידע, ניווטתם בכרטיס, קראתם מצב הרשמה, הפקתם דוח לדוגמה ובחרתם דרך בטוחה לקבל עזרה.</div><p style="margin-top:16px">עכשיו אפשר לחזור על המסלול, או לבחור פעולה אחת מהעבודה היומיומית שלכם וללמוד אותה בהדרכה.</p>`;
+}
+function render(focus=false){
+  document.getElementById('stepIndicator').textContent=S.step===0?'לפני התחלה':S.step===6?'המסלול הושלם':`משימה ${S.step} מתוך 5`;
+  document.getElementById('progressBar').setAttribute('aria-valuenow',String(S.step===6?5:Math.max(0,S.step)));
+  document.getElementById('progressFill').style.width=`${S.step===6?100:Math.max(0,S.step*20)}%`;
+  document.getElementById('mockMenu').innerHTML=['מסך פתיחה','לומדים','הרשמה וקבלה','דוחות','עזרה'].map((name,i)=>`<div class="mocknavitem ${labels[S.step]===name?'active':''}">${name}</div>`).join('');
+  document.getElementById('gameStage').innerHTML=stageTemplate();
+  const hint=document.getElementById('hintButton'),prev=document.getElementById('backButton'),next=document.getElementById('nextButton');
+  hint.hidden=S.step===0||S.step===6;prev.hidden=S.step===0||S.step===6;
+  next.hidden=S.step>0&&S.step<6&&!S.done;
+  next.textContent=S.step===0?'מתחילים':S.step===5?'מסיימים את המסלול':S.step===6?'מתרגלים שוב':'לשלב הבא';
+  hint.setAttribute('aria-expanded',String(S.hint));
+  if(S.hint&&S.step>0&&S.step<6)document.getElementById('liveStatus').innerHTML=`<div class="tip"><strong>רמז:</strong> ${hints[S.step]}</div>`;
+  else if(S.notice)document.getElementById('liveStatus').innerHTML=`<div class="${S.done?'success':'tip'}">${htmlEscape(S.notice)}</div>`;
+  else document.getElementById('liveStatus').innerHTML='';
+  if(focus){document.getElementById('stageTitle').focus({preventScroll:true});}
+}
+function setResult(success,msg){S.done=success;S.notice=msg;S.hint=false;render();}
+function advance(){if(S.step===6){S.step=0}else if(S.step===0||S.done){S.step++;}else return;S.done=false;S.hint=false;S.notice='';S.search='';S.tab='';S.status='';S.report='';render(true);if(S.step===1||S.step===0){document.getElementById('practice').scrollIntoView({block:'start',behavior:'auto'});}}
+function back(){if(S.step>0&&S.step<=5){S.step--;S.done=false;S.hint=false;S.notice='';S.search='';S.tab='';S.report='';render(true)}}
+document.getElementById('nextButton').addEventListener('click',advance);
+document.getElementById('backButton').addEventListener('click',back);
+document.getElementById('hintButton').addEventListener('click',()=>{S.hint=!S.hint;S.notice='';render();document.getElementById('hintButton').focus();});
+document.getElementById('gameStage').addEventListener('input',e=>{if(e.target.id==='studentName')S.search=e.target.value;});
+document.getElementById('gameStage').addEventListener('change',e=>{if(e.target.id==='reportSelect')S.report=e.target.value;});
+document.getElementById('gameStage').addEventListener('submit',e=>{if(e.target.id==='searchForm'){e.preventDefault();const v=S.search.trim().replace(/\s+/g,' ');if(v==='נועה ישראלי')setResult(true,'מצוין. מצאתם את הרשומה שביקשתם.');else setResult(false,'בדקו את השם שהקלדתם. אפשר גם לבחור „אפשר רמז?”.')}});
+document.getElementById('gameStage').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
+  if(b.dataset.tab){S.tab=b.dataset.tab;if(S.tab==='courses')setResult(true,'יפה מאוד. הגעתם לאזור הקורסים.');else setResult(false,'התנסיתם בלשונית אחרת. עכשיו חפשו את „קורסים”.');return;}
+  if(b.dataset.status){setResult(b.dataset.status==='waiting',b.dataset.status==='waiting'?'מעולה. זיהיתם נכון את מצב ההרשמה.':'קראו שוב את מצב ההרשמה שמופיע בכרטיס.');return;}
+  if(b.dataset.act==='report'){setResult(S.report==='registrations',S.report==='registrations'?'נהדר. הפקתם דוח הרשמות לדוגמה.':'בחרו קודם את סוג הדוח „הרשמות”.');return;}
+  if(b.dataset.help){setResult(b.dataset.help==='ask',b.dataset.help==='ask'?'בדיוק כך. כשלא בטוחים, פונים למקור עזרה מוסמך.':'עדיף להיעזר בהכוונה לפני שינוי מידע במערכת אמיתית.');return;}
+});
+let fontPercent=100;
+document.getElementById('fontUp').addEventListener('click',()=>{fontPercent=Math.min(130,fontPercent+10);document.documentElement.style.setProperty('--font-scale',fontPercent+'%');});
+document.getElementById('fontDown').addEventListener('click',()=>{fontPercent=Math.max(90,fontPercent-10);document.documentElement.style.setProperty('--font-scale',fontPercent+'%');});
+document.getElementById('contrast').addEventListener('click',e=>{const on=document.body.classList.toggle('high-contrast');e.currentTarget.setAttribute('aria-pressed',String(on));});
+document.getElementById('printPage').addEventListener('click',()=>window.print());
+render();
+</script>
+</body>
+</html>
